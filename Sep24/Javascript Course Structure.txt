@@ -1,0 +1,86 @@
+- Javascript Introduction
+- Advantages and Usage of JS
+- How to run JS code
+- Including JS in Html Script Tag
+- What is the best practice? What is the reason behind putting scripts at the end of the body tag?
+- Referring External Scripts
+- Execute Javascript code in node. How is it different from running it in a browser?
+- var vs const vs let
+- Data Types (primitive and reference)
+- Dynamic Typing
+- Functions - usual vs arrow function
+- Operators ( ==, ===) [How to calculate 3^2 in JS], Ternary Operators, Logical operators
+- Function to swap 2 elements (a, b)
+- FizzBuzz Question in JS (if 3- fizz, 5 - buzz, 3, 5 - fizzbuzz, number)
+- Bubble Sort in JS (
+---------------------------------------------------------------------------------------------------
+- Javascript vs ES5/ES6
+- Functions with 3 params, caller passes only 2 arguments. What happens? Why is Javascript not a strict language?
+- Objects/Arrays
+- Hoisting 
+- isNan Property
+- Function and its scope (variable and all)
+---------------------------------------------------------------------------------------------------
+- Arrays - map, filter, reduce
+- Looping - for, if-else, switch
+	- for in loop - properties
+	- for of loop - array iteration
+- this - keyword
+- changing value of this in function
+- call, apply, bind
+- use arrow function - value of "this" does not change
+- example button click with document style
+-----------------------------------------------------------------------------------------------------
+- IIFE
+- Callbacks
+- BOM Programming
+	- window.innerHeight, window.innerWidth, window.open(), window.close()
+	- location - hostname, pathname, protocol, assign(), href
+	- history - back(), forward()
+	- Navigator - appname, appcodename, cookieenabled, product, appversion, platform ,language
+	- alert(), confirm(), prompt(), \n(line breaks)
+	- Timers - setTimeout, setInterval, clearTimeout, clearInterval
+--------------------------------------------------------------------------------------------------
+- DOM Programming 
+	- methods, properties and events to change HTML elements
+	- DOM Methods- actions [property is value, method is action]
+	- different document methods - BYID, bytagnames, byclassname, forms[]
+	- document.write()
+	- Events -> onclick, onload, onchange, onmouseover, onmouseout, onmousedown, onmouseup, onfocus, 
+	- Event Listener -> addEventListener(click, function), passing params, removeEventListener
+---------------------------------------------------------------------------------------------------
+- DOM nodes -> appendChild, insertBefore, remove(), replaceChild
+------------------------------------------------------------------------------------------------------
+- Variable Shadowing
+- JS Classes
+- JS Forms and its validations
+-------------------------------------------------------------------------------------------
+- Prototype Based OOPs
+- 4 Pillars of OOPs
+- Encapsulation
+------------------------------------------------------------------------------------------
+- Abstraction
+- Inheritance and Polymorphism
+- Closures
+-----------------------------------------------------------------------------------------
+- Prototypes
+- Prototype Inheritance
+---------------------------------------------------------------------------------------
+- error handling in JS
+-----------------------------------------------------------------------------------------------
+- JS Async
+- Promises
+- Await/Async
+- APIs Calling
+-----------------------------------------------------------------------------------------------
+- JS Objects
+- ES6 Features - Destructuring, spread operator, rest operator, Map, Set
+-----------------------------------------------------------------------------------------------
+- Higher Order Functions
+- Currying
+- Event Looping
+- localStorage, sessionStorage, cookie
+- Memoization
+-----------------------------------------------------------------------------------------------
+Debouncing -- most hated in my life -- ????? - delay function in debounce (viewport)
+Polyfill - ???? 

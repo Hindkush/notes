@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Twitter </title>
+        <style>
+            div {
+                display: flex;
+                height: 102px;
+                width: 102px;
+                border: 2px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img id="drag1" ondragstart="drag(event)" src="image1.jpg" height="100px" width="100px" draggable="true">
+        </div>
+
+        <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img id="drag2" ondragstart="drag(event)" src="image2.jpg" height="100px" width="100px" draggable="true">
+        </div>
+
+
+        <script>
+            function allowDrop(event) {
+                event.preventDefault();
+            }
+
+           function drag(event) {
+               const dragId = event.target.id; //Image1 (drag1)
+               const parentId = event.target.parentElement.id; //Div (div1)
+               event.dataTransfer.setData('dragID', dragId);
+               event.dataTransfer.setData('parentId', parentId);
+           }
+
+           function drop(event) {
+               event.preventDefault();
+               const dragId = event.dataTransfer.getData('dragID');
+               const parentId = event.dataTransfer.getData('parentId');
+
+                if(event.target.draggable) {
+                    //div2.append(drag1);
+                    event.target.parentElement.appendChild(document.getElementById(dragId));
+                    //div1.append(drag2)
+                    document.getElementById(parentId).appendChild(event.target);
+                }
+           }
+        </script>        
+    </body>
+</html>

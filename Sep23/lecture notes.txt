@@ -1,0 +1,70 @@
+#API Calling Example - GET, POST (syntax) - Promise
+Function vs arrow function
+variable shadowing ------- done
+higher order function 
+Template String ---------- done
+callback - ?????
+this -> Object Related?????
+-----------------------------------------------------------------------------------
+Infinte Scrolling
+
+window.addEventListener('scroll', load);
+            var counter = 0;
+
+            function load() {
+                while(true) {
+                    let windowBottom = document.documentElement.getBoundingClientRect().bottom;
+                    console.log("Windw bottom - "  ,windowBottom + 'counter = ' + counter);
+                    let clientHeight = document.documentElement.clientHeight;
+                    console.log("client Height - ", clientHeight);
+
+                    if(windowBottom > clientHeight + 100) break;
+
+                    document.body.insertAdjacentHTML('beforeend', `<p> Hello ${counter++} </p>`);
+                }
+            }
+            load();
+---------------------------------------------------------------------------------------	
+Acceptance:
+
+- 6 div(div1, div6) -> child (img - drag1 to drag6)
+- Image should be draggeable
+- img will be dragged - it will override that element		
+
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img id="drag1" ondragstart="drag(event)" src="image1.jpg" height="100px" width="100px" draggable="true">
+        </div>
+
+        <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img id="drag2" ondragstart="drag(event)" src="image2.jpg" height="100px" width="100px" draggable="true">
+        </div>
+
+
+        <script>
+            function allowDrop(event) {
+                event.preventDefault();
+            }
+
+           function drag(event) {
+               const dragId = event.target.id; //Image1 (drag1)
+               const parentId = event.target.parentElement.id; //Div (div1)
+               event.dataTransfer.setData('dragID', dragId);
+               event.dataTransfer.setData('parentId', parentId);
+           }
+
+           function drop(event) {
+               event.preventDefault();
+               const dragId = event.dataTransfer.getData('dragID');
+               const parentId = event.dataTransfer.getData('parentId');
+
+                if(event.target.draggable) {
+                    //div2.append(drag1);
+                    event.target.parentElement.appendChild(document.getElementById(dragId));
+                    //div1.append(drag2)
+                    document.getElementById(parentId).appendChild(event.target);
+                }
+           }
+        </script>        
+		
+-----------------------------------------------------------------------------------

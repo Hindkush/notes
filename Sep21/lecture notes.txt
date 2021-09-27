@@ -1,0 +1,83 @@
+- Destructuring
+- Rest Parameter
+- Spread
+- Map
+- Set
+- Higher Order functions
+-------------------------------------------
+Currying - 5-10 mins topic
+localstorage, memoization
+---------------------------------------------------------------
+
+Wednesday -> Some Topics on Discussion, Important Interview Questions
+Thursday -> Assignments (2, 3 assignment) 
+Friday -> ?????? (Discussion), some Code Snippets (complex)
+
+Issues:
+- JS Assignments
+-----------------------------------------------------------------------------
+
+- Destructuring of Objects/Arrays
+ES6 feature
+
+Rest and Spread Parameter/Operator
+Syntax ...{variable}
+
+Rest -> Better Handling of Parameters in your function
+Spread -> Spread Array into Variables
+-----------------------------------------------------------------------------------------
+Map - Key Value Pair (Insertion Order) id, WeakMap
+Object - ??? 
+
+let map = new Map();
+map.set()
+
+Set, WeakSet
+set.add() -> 
+let set = new Set(); -> Unique Elements
+Set, Map -> all methods are same 
+there is no key value pair -> keys -> values
+							values -> values
+							entreis -> value, value
+-----------------------------------------------------------------
+Higher Order functions
+- Either it takse input as function and return new function
+- returns new function
+
+function myFunc() {
+	return function(n1) {
+		console.log(n1);
+	}
+}
+
+function myFunc() {
+	return
+}
+
+const returnedFunction = myFunc();
+returnedFunction('anuj');
+
+function myFunc2(fn) {
+	fn();
+}
+
+Higher Order functions in JS 
+
+
+arr.map(callback) -> map is high order function
+arr.reduce(callbakc) -> high
+
+callback = () => value * 2;
+-------------------------------------------------------------------------------
+
+Acceptanc Criteria:
+- Sub tasks
+
+Implementation of each criteria
+- Sub task 
+
+Integration of all sub tasks
+- Use of any feature of JS
+
+
+

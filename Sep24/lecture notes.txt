@@ -1,0 +1,112 @@
+#API Calling Example - GET, POST (syntax) - Promise
+Function vs arrow function
+variable shadowing ------- done
+higher order function 
+Template String ---------- done
+callback - ?????
+this -> Object Related?????
+---------------------------------------------------------------------------
+
+let person = { id: 10, name: 'anuj', getname = () => return this.name };
+
+person.getName();
+
+function myFunc() {
+console.log(this);
+}
+
+myFunc();//window
+
+Higher Order Functions
+
+takes parameter as function and/or return another/new function
+
+Array
+- map
+- filter
+- reduce
+- sort
+
+All these methods are higher order functions
+
+myFunc = (num) => { };
+
+num = String, Number, Boolean, array, Object -> Are not higher order functions
+
+let arr = [10, 20, 30, 40]; -> filter elements > 25
+
+IF HOF ****
+
+function greater(num) {
+	return num > 25;
+}
+
+let arr2 = [];
+for(let i = 0; i < arr; i++) {
+	if(greater(arr[i]) {
+		arr2.push(arr[i]);
+	}
+}
+
+HOF -> It will provide you reusable function/code
+
+let filteredArr = arr.filter(greater);
+arr2.filter(function(num) { return num > 25 })
+arr3.filter(greater)
+----------------------------------------------------------------------
+Callbacks:
+-> function myFunc(a, b, sum) {
+	a++, b++;
+	sum(a, b);
+   }
+   
+   print = () => console.log(10);
+   setTimeout(print , 2000); 
+-------------------------------------------------------------------------------------------
+async function myFunc() {
+	
+	this //window object
+}
+
+myFunc = async () => { console.log(10) //ES6 (this will be bind automatically)
+console.log(20)
+};
+
+async function myFun()
+{ 
+	await 
+	}
+	
+	myFunc.bind(obj);
+	myFunc = async () => { await };
+-----------------------------------------------------------------------------------------
+<button onclick="getData(this)">
+
+getData = (element) => { 
+	element -> button
+}
+
+let ques = new Question(10, 'anuj');
+
+class Question {
+constructor(id, name)	{
+this.id = id;
+
+getResult() 
+	{this.id}
+	
+element.addEventListener('click', (event) => { } );
+----------------------------------------------------------------------------
+
+element.addEventListener('click', (event) => { } );
+element.addEventListener('click', function(event) { });
+element.addEventListener('click', eventHandler);
+------------------------------------------------------------------------------
+Taking Inputs
+
+process.stdin.once('data', print)
+
+function print(chunk) {
+    console.log(chunk.toString());
+}
+---------------------------------------------------------------------

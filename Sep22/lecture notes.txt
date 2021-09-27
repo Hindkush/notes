@@ -1,0 +1,109 @@
+- Currying Concept
+- Event Bubbling, Event Capturing, Event Delegation
+---------------------------------------------------------------
+Currying - Transforming function from multiple params to single execution params
+
+function (a, b, c) => function(a)(b)(c)
+
+a, b, c -> (a)(b)(c)
+
+function sum(a, b) {
+	return a + b;
+}
+
+//100 times to sum -> a is fixed constant
+//sum(a, 5), sum(a, 6), sum(a, 7), sum(b, 9)
+
+//let halfDSum = sum(a);
+
+halfSum(6); halfSum(7); halfSum(8);
+
+sum(4, 5); 
+sum(4)(5); -> Currying function
+
+What are the uses of this?
+- Event Handling
+- Pass Same elements again
+
+it always return new function at each passing argument
+
+sum(4, 5);
+
+sum(4) -> it will return a function
+
+returnredFunction(5) -> it will give you output
+
+
+function currying() {
+	return function(a) {
+		return function(b) {
+			return a + b;
+		}
+	}
+}
+--------------------------------------------------------------------------------------------
+Event Bubbling, Capturing, Delegation
+- Event Bubbling -> propagate your event listener from child to parent
+- Event Capturing -> vice a versa (parent to child)
+
+=> If There is same event handler on parent and child
+-------------------------------------------------------------------------------------------
+Event Delagation
+- Handling Events Delegately
+
+const ul = document.createElement('ul');
+
+function myFunc(event) {
+	console.log(event.target.nodename == 'li'); 
+	console.log("list item Responding");
+}
+
+for(let i = 0; i < 5; i++) {
+	const listItem = document.createElement('li');
+	listItem.innerHTML = 'List '+i;
+	ul.appendChild(listItem);
+}
+
+ul.addEventListener('click', myFunc);
+
+Saved Time and Memory and event handling properly by delegation
+-------------------------------------------------------------------------------
+Important Question::
+- let, const, var - its scopes 
+- undefined, null, NaN, undeclared 
+- primitive data types - String, number, boolean etc etc.
+- hoisting with examples (variable, function, inner function)
+- == vs ===
+- IIFE
+- Spread and Rest Operators
+- Promises - async, await, then, try, catch, finally, resolve, reject
+- Prototypes and its inheritance
+- Function vs arrow function
+- Events - Bubbling, Capturing, Delegation
+- ES6 features- destructuring, map, set, Object
+- Arrays and its methods
+- this keyword, call, apply, bind
+- Higher Order Fcuntions
+- Currying
+- Closures and Callbacks
+- timers - settimeour, setInterval , clear
+- async functions - API calling
+- DOM Programming
+- Variable Shadowing
+- Constructor and Classes
+- Strict Mode
+------------------------------------------------------
+Friday Discussion
+
+#API Calling Example - GET, POST (syntax) - Promise
+Function vs arrow function
+variable shadowing
+higher order function (5)
+Template String 
+callback - ?????
+this -> Object Related?????
+
+
+
+
+
